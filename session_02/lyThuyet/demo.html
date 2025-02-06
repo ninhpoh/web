@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="2" cellpadding="5" cellspacing="5">
+        <caption>quan ly sinh vien</caption>
+        <thead> <!-- phan dau cua bang -->
+            
+        </thead>
+        <tbody> <!-- phan giua cua bang -->
+            <tr>
+                <th>STT</th>
+                <th>Ho va Ten</th>
+            </tr>
+            <tr>
+                <td align="center" rowspan="2">1</td>
+                <td bgcolor="red">nguyen van a</td>
+            </tr>
+            <tr>
+                <!-- <td>2</td> -->
+                <td>tran thi b</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- phan cuoi cua bang -->
+            <tr>
+                <td colspan="2">tong so sv: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+<!-- 
+bang trong HTML
+********************************************************************************************************************************
+KHAI NIEM:
+    <table>---bang
+    <caption>---tieu de cua bang
+    <tr>---hang 
+    <td>---cot
+    <th>---noi dung dc boi dam va auto can giua van ban
+THUOC TINH:
+    * border: duong vien cua bang (gia tri tinh bang px)
+    * thead: phan dau cua bang    |
+    * tbody: phan giua cua bang   | thuoc tinh ben trong giong nhu table binh thuong
+    * tfoot: phan cuoi cua bang   |
+    * cellpadding: khoang canh tu vien den van ban                  |
+    * cellspacing: khoang cach tu vien cua bang den vien cua cot    | phai go chay
+    * colspan: gop cac cot thanh 1
+    * rowspam: gop cac hang thanh 1
+********************************************************************************************************************************
+-->
