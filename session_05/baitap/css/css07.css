@@ -1,0 +1,52 @@
+table,th,td{
+    border: 1px solid rgb(166, 157, 157);
+    border-collapse:collapse;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.table{
+    width: 99%;
+}
+.center{
+    text-align: center;
+    background-color: rgb(243, 242, 242);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.th{
+    background-color: blue;
+    color: white;
+}
+.td{
+    background-color: white;
+}
+.id{
+    width: 50px;
+}
+.user{
+    width: 200px;
+}
+.email{
+    width: 150px;
+}
+.pu{
+    width: 200px;
+}
+.role{
+    width: 300px;
+}
+.red{
+    background-color: red;
+    color: white;
+    border: none;
+}
+.yellow{
+    background-color: yellow;
+    color: #000;
+    border: none;
+}
+.green{
+    background-color: green;
+    color: white;
+    border: none;
+}
