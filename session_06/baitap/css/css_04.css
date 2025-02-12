@@ -1,0 +1,35 @@
+html{
+    width: 1000px;
+}
+.header{
+    text-align: center;
+    background-color: greenyellow;
+    padding: 5px ;
+}
+.Categories{
+    padding:  0 20px;
+}
+.main{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+.trai{
+    border: 1px solid darkgrey;
+    background-color: #f1f1f1;
+    width: 40%;
+}
+.phai p{
+    border-bottom: 2px solid #f1f1f1;
+    width: 200%;
+    
+}
+.footer{
+    text-align: center;
+    background-color: darkgray;
+    padding: 20px 0;
+    color: white;
+    font-size: larger;
+    flex-wrap:nowrap;
+    
+}
