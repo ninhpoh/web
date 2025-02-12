@@ -1,0 +1,33 @@
+.rigth{
+    text-align: left;
+
+}
+.center{
+    text-align: center;
+}
+table{
+    background-color: yellowgreen;
+    color: white;
+    text-align: right;
+    width: 100%;
+}
+.foot{
+    background-color: rgb(12, 12, 12);
+    padding: 20px;
+    color: white;
+}
+.bg{
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+}
+.button1{
+    background-color: rgb(109, 197, 109);
+    color: white;
+    border: none;
+    padding: 5px;
+}
+.but3{
+    padding-left: 12%;
+    padding-right: 12%;
+
+}

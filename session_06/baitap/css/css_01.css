@@ -1,0 +1,16 @@
+.text{
+    background-color: rgb(85, 185, 252);
+    color: aliceblue;
+}
+.cen{
+    text-align: center;
+}
+img{
+    border-radius: 50%;
+    text-align: center;
+    border: 7px solid greenyellow;
+}
+.foot{
+    background-color: rgb(194, 194, 194);
+    padding: 20px;
+}
