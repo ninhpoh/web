@@ -1,0 +1,13 @@
+p{
+    display: inline-block;
+    
+}
+.container{
+    width: 1000px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+br{
+    border-bottom:1px solid gray ;
+}

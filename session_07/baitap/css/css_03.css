@@ -1,0 +1,21 @@
+.main{
+    width: 400px;
+
+}
+p{
+    display: inline-block;
+}
+h2{
+    display: inline-block;
+}
+.icon{
+    color: red;
+}
+img{
+    width: 400px;
+    height: 250px;
+}
+.text{
+    position: relative;
+    bottom: 25px;
+}

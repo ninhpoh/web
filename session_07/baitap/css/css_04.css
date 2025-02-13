@@ -1,0 +1,22 @@
+.container{
+    width: 400px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+h1{
+    border-left: 6px solid orange;
+}
+img{
+    width: 400px;
+    position: relative;
+}
+.text{
+    width: 400px;
+    position: absolute;
+    bottom: 90px;
+    color: rgb(255, 255, 255);
+    font-size: 200%;
+}
+.p{
+    border-bottom: 2px solid rgb(206, 206, 206);
+}

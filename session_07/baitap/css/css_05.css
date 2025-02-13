@@ -1,0 +1,48 @@
+html{
+    width: 300px;
+}
+p{
+    display: inline-block;
+    margin: 5px;
+}
+.contact{
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+    border: 2px solid black;
+}
+h1{
+    margin: 0;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    
+}
+img{
+    position: absolute;
+    bottom: 390px;
+    left: 250px;
+}
+.border{
+    border-bottom: 1px solid black;
+    
+}
+.color{
+    color:  orange;
+}
+.button1{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 15px 50px 15px 50px;
+    border-radius: 20%; 
+}
+.button2{
+    border: 2px solid red;
+    background-color: white;
+    color: rgb(255, 0, 0);
+    padding: 5px 20px 5px 20px;
+    border-radius: 20%; 
+    margin-bottom: 10px;
+}
