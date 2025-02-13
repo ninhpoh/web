@@ -16,6 +16,7 @@ button{
     background-color: rgb(56, 192, 255);
     color: white;
     border: none;
+    border-radius: 5px;
 }
 .outbg{
     padding: 5px;
