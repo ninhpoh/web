@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    display:inline-block;
+    border-bottom: 3px solid red;
+    padding: 0 0 10px 0;
+}
+.p{
+    border: 1px solid rgb(202, 202, 202);
+    padding: 30px;
+    transform: rotate(45deg);
+}
+i{
+    transform: rotate(-45deg);
+    color: red;
+}
+table{
+    padding-left: 10px;
+}
+p{
+    display: inline-block;
+    margin: 6px;
+}
+div{
+    display: inline-block;
+}
+.w{
+    width: 250px;
+}
+.text{
+    opacity: 40%;
+}

@@ -1,0 +1,29 @@
+h2{
+    display: inline;
+    border-bottom: 2px solid salmon; 
+}
+.body{
+    width: 250px;
+    padding: 20px 10px 10px 10px;
+}
+.body2{
+    width: 250px;
+    padding: 20px 10px 10px 10px;
+    border-left: 1px solid gray;
+}
+div{
+    display: inline-block;
+}
+img{
+    width: 250px;
+}
+button{
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: white;
+    padding: 7px 25px 7px 25px;
+    color: red;
+}
+p{
+    opacity: 40%;
+}
