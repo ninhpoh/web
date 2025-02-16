@@ -37,3 +37,10 @@ label{
     margin-left: 20px;
     background-color: aliceblue;
 }
+input{
+    background-color: rgb(184, 201, 255);
+}
+textarea{
+    background-color: rgb(184, 201, 255);
+
+}
