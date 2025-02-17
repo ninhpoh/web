@@ -1,40 +1,25 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-.container{
-    width: 700px;
-    height: 80px;
-    background-color: rgb(226, 226, 226);
-    border: 1px solid black;
+.parents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: 10px auto;
+    padding: 5px;
+    border: none;
+    justify-content: center;
+    background-color: #b8aeae;
+  }
+  .parents .chill, .parents .chill_5 {
+    width: 120px;
+    height: 50px;
+    background-color: #2ff582;
+    margin: 2px 2px 5px 2px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.container .main{
-    padding: 5px 10px 5px 10px;
-    background-color: greenyellow;
-    text-align: center;
-    border: 1px solid red;
+    justify-content: center;
     color: white;
-    margin-bottom: 1px;
-    width: 130px;
-}
-.body{
-    width: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 5px 10px 5px 10px;
-
-}
-.item{
-    flex: 2;
-}
-.item2{
-    flex: 1;
-}
-
-
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  .parents .chill_5 {
+    width: 245px;
+  }/*# sourceMappingURL=baitap3.css.map */
