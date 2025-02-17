@@ -3,7 +3,7 @@
     margin: 0;
 }
 .container{
-    width: 650px;
+    width: 700px;
     height: 80px;
     background-color: rgb(226, 226, 226);
     border: 1px solid black;
@@ -16,15 +16,25 @@
     padding: 5px 10px 5px 10px;
     background-color: greenyellow;
     text-align: center;
-    border: none;
+    border: 1px solid red;
     color: white;
     margin-bottom: 1px;
     width: 130px;
 }
+.body{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5px 10px 5px 10px;
+
+}
 .item{
     flex: 2;
 }
-.item1{
+.item2{
     flex: 1;
 }
+
 
