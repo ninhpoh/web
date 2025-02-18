@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(179, 179, 179);
+    width: 722px;
+    padding: 10px;
+}
+img{
+    width: 700px;
+    height: 300px;
+    position: relative;
+}
+button{
+    border: 2px solid white;
+    color: white;
+    background-color: blue;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+.text{
+    width: 650px;
+    color: white;
+    position: absolute;
+    top: 190px;
+    left: 20px;
+}
+.foot{
+    padding: 20px 0 20px 0;
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.foot>div{
+    padding: 10px;
+    text-align: center;
+    margin-right: 30px;
+    border-radius: 40%;
+}
+.foot>div:hover{
+    background: yellow;
+}
+a{
+    margin-right: 20px;
+}

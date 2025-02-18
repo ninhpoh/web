@@ -1,0 +1,39 @@
+.container{
+    width: 285px;
+    background-color: rgb(242, 245, 247);
+}
+.img>img{
+    padding: 5px;
+    position: relative;
+    border-radius: 10px;
+}
+.img>p{
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid white;
+    position: absolute;
+    top: 5px;
+    left: 227px;
+}
+.main>p{
+    display: inline-block;
+    margin: 10px;
+    opacity: 50%;
+}
+h3{
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+.main>img{
+    width: 50px;
+    position: relative;
+    border-radius: 50%;
+}
+.main .name{
+    position: absolute;
+    top: 210px;
+    left: 65px;
+    color: black;
+    opacity: 100%;
+}
