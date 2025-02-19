@@ -1,0 +1,143 @@
+*{
+    text-align: center;
+    box-sizing: border-box;
+}
+.container{
+    width: 60%;
+    background-color: blueviolet;
+    margin-left: 20%;
+    text-align: center;
+}
+.header{
+    display: flex;
+}
+.header .header_c{
+    height: 50px;
+    background-color: aqua;
+    width: 50%;
+    margin: 5px;
+    color: aqua;
+}
+.text{
+    height: 100px;
+    margin: 5px;
+    background-color: yellowgreen;
+    color: yellowgreen;
+}
+.body{
+    display: flex;
+}
+.body .body_c{
+    margin: 5px;
+    width: 40%;
+    height: 90px;
+    background-color: chocolate;
+    color: chocolate;
+}
+
+.footer{
+    display: flex;
+}
+.footer .f1{
+    width: 50%;
+    display: flex;
+}
+.footer .f2{
+    width: 50%;
+    display: flex;
+}
+.footer .f1 .footer_c{
+    margin: 5px;
+    width: 50%;
+    height: 90px;
+    background-color: rgb(65, 35, 14);
+    color: rgb(65, 35, 14);
+}
+.footer .f2 .footer_c{
+    margin: 5px;
+    width: 50%;
+    height: 90px;
+    background-color: rgb(65, 35, 14);
+    color: rgb(65, 35, 14);
+}
+@media screen and (max-width: 1200px){
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .header .header_c{
+        height: 50px;
+        background-color: aqua;
+        width: 98%;
+        margin: 5px;
+        color: aqua;
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+    }
+    .body .body_c{
+        margin: 5px;
+        width: 98%;
+        height: 90px;
+        background-color: chocolate;
+        color: chocolate;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .f1{
+        width: 100%;
+        display: flex;
+    }
+    .footer .f2{
+        width: 100%;
+        display: flex;
+    }
+    .footer .f1 .footer_c{
+        margin: 5px;
+        width: 50%;
+        height: 90px;
+        background-color: rgb(65, 35, 14);
+        color: rgb(65, 35, 14);
+    }
+    .footer .f2 .footer_c{
+        margin: 5px;
+        width: 50%;
+        height: 90px;
+        background-color: rgb(65, 35, 14);
+        color: rgb(65, 35, 14);
+    }
+}
+@media screen and (max-width: 768px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .f1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .f2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .footer .f1 .footer_c{
+        margin: 5px;
+        width: 98%;
+        height: 90px;
+        background-color: rgb(65, 35, 14);
+        color: rgb(65, 35, 14);
+    }
+    .footer .f2 .footer_c{
+        margin: 5px;
+        width: 98%;
+        height: 90px;
+        background-color: rgb(65, 35, 14);
+        color: rgb(65, 35, 14);
+    }
+}

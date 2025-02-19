@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            height: 50px;
+            background-color: red;
+            line-height: 50px;
+            text-align: center;
+        }
+        .header input{
+            width: 80%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
+        .header button{
+            width: 15%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        @media screen and  (max-width: 1200px) {
+            .header{
+                height: 80px;
+                background-color: green;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+            .header input{
+            
+            width: 50%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            margin-left: 5px;
+            border-radius: 5px;
+            }
+            .header button{
+            width: 50%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            }
+        }
+        @media screen and (max-width: 760px) {
+            .header{
+                background-color: blue;
+                display: flex;
+            }
+            .header input{
+            
+            width: 50%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            margin-left: 5px;
+            border-radius: 5px;
+            }
+            .header button{
+
+            width: 50%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <input type="text">
+        <button>Tim kiem</button>
+    </div>
+</body>
+</html>
+<!-- 
+    reponsive: la ki thuat giup giao dien trang web tuong thich tren nhieu loai thiet bi khac nhau
+    1. breakpoin
+        ty le man hinh
+        mobile: 320px -> 760px
+        tablet; 760px -> 1200px
+        destop: > 1200px
+    2. mobile first: thứ tự thiết kế đt -> tablet -> destop
+    3. desktop fisrt: thứ tự thiết kê destop -> tablet -> đt
+      -->
