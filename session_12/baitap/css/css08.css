@@ -1,0 +1,22 @@
+.container{
+    background-color: rgb(240, 240, 240);
+    width: 50%;
+    border-radius: 7px;
+}
+.main{
+    margin-left: 5px;
+    width: 70%;
+    
+}
+.footer{
+    width: 60%;
+}
+.footer>input{
+    width: 200px;
+}
+.but>button{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}

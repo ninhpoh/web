@@ -1,0 +1,15 @@
+.container{
+    width: 60%;
+}
+.d-flex{
+    justify-content: space-around;
+}
+.d-flex .p-2{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 30%;
+}
+button{
+    border: none;
+    width: 100%;
+}

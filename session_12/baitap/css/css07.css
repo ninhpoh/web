@@ -1,0 +1,15 @@
+
+.container{
+    width: 60%;
+}
+.position-absolute{
+    padding-left: 10px;
+    top: 130px;
+    color: white;
+}
+.text>i,span{
+    margin: 5px;
+    top: 200px;
+    position: absolute;
+    color: white;
+}
