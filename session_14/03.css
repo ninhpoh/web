@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    
+}
+/* header */
+.header{
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.header .menu{
+    gap: 20px;
+    align-items: center;
+}
+.header .menu .mune{
+    display: block;
+}
+.header .menu .but{
+    display: block;
+}
+.header .menu a{
+    text-decoration: none;
+    color: black;
+}
+.header .download{
+    align-items: center;
+    gap: 20px;
+}
+/* main */
+
+.main .main-1{
+    padding: 90px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+}
+.main .main-1 .text-main-1{
+    width: 60%;
+}
+.main .main-1 .pic .human{
+    top: -30px;
+    left: -30px;
+}
+.main .main-2{
+    background-color: rgb(255, 255, 255);
+    padding: 80px;
+}
+.main .main-2 .text-center button{
+    border-radius: 40%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+.main-2 .brands{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.main-2 .brands .cop{
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+}
+.main-2 .brands .cop2{
+    width:30%;
+    justify-content: start;
+}
+
+.main-2 .brands .icon{
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+}
+.main-3{
+    padding: 90px;
+    background-color: rgb(255, 255, 255);
+}
+.main-3 .content{
+    background-color: cadetblue;
+    /* padding: 50px; */
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.main-3 .content img{
+    padding: 0;
+    margin: 0;
+}
+.main-3 .content .bg-img{
+    background-color: rgb(233, 233, 233);
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+.main-3 .content .text{
+    padding: 20px;
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-3 .content .text button{
+    border-radius: 40%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+/* 2 */
+.main-3 .content2{
+    background-color: cadetblue;
+    /* padding: 50px; */
+    border-radius: 10px;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+}
+.main-3 .m .d-flex{
+    flex-direction: row-reverse;
+}
+.main-3 .content2 img{
+    padding: 0;
+    margin: 0;
+}
+.main-3 .content2 .bg-img{
+    background-color: rgb(233, 233, 233);
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+.main-3 .content2 .text{
+    padding: 20px;
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(255, 255, 255);
+}
+.main-3 .content2 .bg-img-b{
+    background-color: rgb(233, 233, 233);
+    padding: 20px;
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+}
+.main-3 .content2 .text-b{
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(255, 255, 255);
+}
+.main-3 .m .content2 .text-b button{
+    border-radius: 40%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+/*  2*/
+.main .main-3 .top button{
+    border-radius: 40%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+/* footer */
+.footer{
+    padding: 20px;
+    background-color: rgb(221, 229, 236);
+}
+@media screen and (max-width: 768px) {
+    .header .menu .mune{
+        display: none;
+    }
+    .header .menu .but{
+        display: none;
+    }
+    /* main */
+
+    .main .main-1{
+        flex-direction: column-reverse;
+    }
+
+    .main .main-1 .pic{
+        width: 100%;
+    }
+    .main .main-1 .pic .human{
+        top: -25px;
+        left: 27px;
+    }
+    .main .main-1 .pic .human img{
+        width: 80%;
+        height: 80%;
+    }
+    .main .main-1 .text-main-1{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .main-2 .brands{
+        flex-direction: column;
+    }
+    .main-2 .brands .cop{
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+    }
+    .main-2 .brands .cop2{
+        width: 100%;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+    }
+    .main-3 .content{
+        flex-direction: column;
+    }
+    .main-3 .content .bg-img{
+        background-color: rgb(233, 233, 233);
+        padding: 20px;
+        width: 100%;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .main-3 .content .bg-img img{
+        width: 95%;
+    }
+    .main-3 .content .text{
+        padding: 20px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        background-color: rgb(255, 255, 255);
+    }
+    .main-3 .m .d-flex{
+        flex-direction:column;
+    }
+    .main-3 .m .content2 .bg-img-b{
+        background-color: rgb(233, 233, 233);
+        padding: 20px;
+        width: 100%;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .main-3 .m .content2 .bg-img-b img{
+        width: 95%;
+    }
+    .main-3 .m .content2 .text-b{
+        padding: 20px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        background-color: rgb(255, 255, 255);
+    }
+
+}

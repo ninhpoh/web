@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1440px;
+
+}   
+.top{
+    background-color: black;
+    height: 48px;
+    display: flex;
+    text-size-adjust: 20px;
+}
+.top .top_text a{
+    color:   white !important;
+}
+.top .top_text{
+    width: 85%;
+    margin-top: 10px;
+    
+}
+.top .form-select{
+    width: 10%;
+    background-color: black;
+    color: white;
+    border: none;
+}
+/* CSS  header*/
+.header{
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+.header h3{
+    margin: 0;
+}
+.header a{
+    color: black;
+    text-decoration: none;
+}
+.header .another{
+    width: 395px;
+    height: 38px;
+}
+.position-absolute{
+    left: 150px;
+}
+.header .menu{
+    margin: 5px;
+}
+.header .ask{
+    margin: 5px;
+
+}
+/* css main */
+.main{
+    background-color: aqua;
+}
+.main .top_main{
+    margin-left: 5%;
+    width: 1170px;
+    
+}
+.main .top_main .top_l{
+    display: flex;
+}
+.main .top_main .top_r{
+    display: flex;
+}
+.op{
+    opacity: 40%;
+}
+.red{
+    color: red;
+}
+.content{
+    margin-left: 5%;
+    width: 1170px;
+    background-color: white;
+}
+/* css footer */
+.footer{
+    background-color: black;
+    color: white;
+}
