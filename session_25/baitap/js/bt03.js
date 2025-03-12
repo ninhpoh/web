@@ -20,5 +20,5 @@ function findEven(arr){
 }
 
 findEven([]);
-findEven("fdfdfdf");str=prompt("sdasd");
+findEven("fdfdfdf");
 findEven([4,4,6,7,1,2,4]);

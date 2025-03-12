@@ -15,12 +15,12 @@ function findMin(arr){
             minElement=arr[i];
         } 
     }
-    console.log(111111,minElement);
+    console.log(minElement);
     return minElement;
     
     
  
 }
-// findMin([]);
-// findMin("fdfdfdf");
+findMin([]);
+findMin("fdfdfdf");
 findMin([4,4,6,7,1,2,4]);
