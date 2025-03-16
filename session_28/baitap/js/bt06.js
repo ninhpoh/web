@@ -8,7 +8,7 @@ const cart = [
 
 ];
 
-function total(cart) {
+function toTal(cart) {
     let total = 0;
     cart.forEach(item => {
       total += item.price * item.quantity;
@@ -16,4 +16,8 @@ function total(cart) {
     return total;
 }
 
-console.log("Tổng tiền trong giỏ hàng là: " + total(cart));
+//! (forEach) chay lan luot qua cac phan tu trong mang 
+//! item. lay cac gia tri de thuc hien phep tinh
+//! tra ve gia tri la total
+
+console.log("Tổng tiền trong giỏ hàng là: " + toTal(cart));
