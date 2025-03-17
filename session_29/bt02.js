@@ -1,6 +1,6 @@
-let list =[];
-let choise=0;
-do{
+let list = [];
+let choise = 0;
+do {
     console.log("=====Menu======");
     console.log("1. Them san phan moi");
     console.log("2. Hien danh muc san pham");
@@ -9,10 +9,10 @@ do{
     console.log("5. Xoa san pham");
     console.log("6. Loc san pham theo khoang gia");
     console.log("================");
-    
+
     choise = +prompt("Thao tac ban muon:");
 
-    switch(choise){
+    switch (choise) {
         case 1:
             let id = parseInt(prompt("Nhập ID:"));
             let name = prompt("Nhập tên:");
@@ -22,7 +22,7 @@ do{
             addList(id, name, price, category, quantity);
             break;
         case 2:
-            list.forEach(function(item) {
+            list.forEach(function (item) {
                 console.log(item);
             });
             break;
@@ -30,10 +30,10 @@ do{
             findContact();
             break;
         case 4:
-            
+
             let updateId = parseInt(prompt("Nhập ID sản phẩm cần cập nhật:"));
             updateProduct(updateId);
-            
+
             break;
         case 5:
             let deleteId = parseInt(prompt("Nhập ID sp cần xóa:"));
@@ -48,7 +48,7 @@ do{
         default:
             console.log("Lệnh không hợp lệ, vui lòng nhập lại!");
     }
-}while(choise !== 7);
+} while (choise !== 7);
 
 function addList(id, name, price, category, quantity) {
     if (list.some(lists => lists.id === id)) { // tim vi theo id neu khong co tra ve -1 -> co the them nv moi 

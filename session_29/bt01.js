@@ -1,8 +1,8 @@
 let contact = [
-    {id:1, name:"tran an Ninh", email:"260806tan@gmail.com", phone: "0966557518" }
+    { id: 1, name: "tran an Ninh", email: "260806tan@gmail.com", phone: "0966557518" }
 ];
-let choise=0;
-do{
+let choise = 0;
+do {
     console.log("=====Menu======");
     console.log("1. Them lien he moi");
     console.log("2. Hien danh ba");
@@ -10,12 +10,12 @@ do{
     console.log("4. Cap nhat lai theo id");
     console.log("5. Xoa lien he");
     console.log("6. Thoat");
-    
+
     console.log("================");
-    
+
     choise = +prompt("Thao tac ban muon:");
 
-    switch(choise){
+    switch (choise) {
         case 1:
             let id = parseInt(prompt("Nhập ID:"));
             let name = prompt("Nhập tên:");
@@ -24,7 +24,7 @@ do{
             addContact(id, name, email, phone);
             break;
         case 2:
-            contact.forEach(function(item) {
+            contact.forEach(function (item) {
                 console.log(item);
             });
             break;
@@ -41,9 +41,9 @@ do{
         default:
             console.log("Lệnh không hợp lệ, vui lòng nhập lại!");
     }
-}while(choise !== 6);
+} while (choise !== 6);
 
-function addContact(id, name, email,phone) {
+function addContact(id, name, email, phone) {
     if (contact.some(contacts => contacts.id === id)) { // tim vi theo id neu khong co tra ve -1 -> co the them nv moi 
         console.log(`nguoi có ID ${id} đã tồn tại!`);
         return;
@@ -65,7 +65,7 @@ function findContact(contacts) {
     }
 }
 
-function updateContact(contact){
+function updateContact(contact) {
     let newId = +prompt("id muon sua:");
     if (contact.some(contacts => contacts.id === id)) { // tim vi theo id neu khong co tra ve -1 -> co the them nv moi 
         console.log(`nguoi có ID ${id} đã tồn tại!`);
