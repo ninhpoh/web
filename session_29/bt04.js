@@ -37,7 +37,15 @@ do {
 } while (choise !== 6);
 
 function addJob() {
-
+    let id;
+    if(job.length==0){
+        id=1;
+    }else{
+        id= job[job.length-1].id+1;
+    }
+    let name =prompt("nhap ten cong viec");
+    let des = prompt("mo ta cong viec");
+    let status = prompt("Nhap trang thai")
 }
 
 function updateJob() {
