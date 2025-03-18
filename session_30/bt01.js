@@ -84,36 +84,38 @@ function showProducts() {
     }
 }
 
-// Hàm chọn mua sản phẩm
 function choseProducts() {
-    let choseId = prompt('Mời bạn nhập id sản phẩm');
-    let shop = products.findIndex(products => products.id == choseId);
-    if (shop == -1) {
-        console.log('Sản phẩm không có trong giỏ hàng');
+    let choseId = +prompt("Nhập ID sản phẩm muốn mua:");
+    let productIndex = products.findIndex(product => product.id === choseId);
+
+    if (productIndex === -1) {
+        console.log("Sản phẩm không có trong cửa hàng.");
+        return;
+    }
+
+    let choseQuantity = +prompt("Nhập số lượng muốn mua:");
+
+    if (products[productIndex].quantity < choseQuantity) {
+        console.log(`Sản phẩm chỉ còn ${products[productIndex].quantity} cái.`);
     } else {
-        let choseQuantity = prompt('Mời bạn nhập số lượng sản phẩm muốn mua');
-        if (products[shop].quantity < choseQuantity) {
-            console.log(`Sản phẩm chỉ còn ${products[shop].quantity}`);
+        products[productIndex].quantity -= choseQuantity;
+
+        // Kiểm tra sản phẩm đã có trong giỏ hàng chưa
+        let cartIndex = carts.findIndex(item => item.id === choseId);
+        
+        if (cartIndex === -1) {
+            carts.push({
+                id: choseId,
+                name: products[productIndex].name,
+                quantity: choseQuantity,
+                price: products[productIndex].price,
+                category: products[productIndex].category
+            });
         } else {
-            products[shop].quantity -= choseQuantity;
-            // Thêm vào trong giỏ hàng
-            // Kiểm tra sản phẩm có trong cửa hàng hay chưa
-            let index = carts.findIndex(item => item.id == choseId);
-            if (index == -1) {
-                // Chứng tỏ sản phẩm không có trong giỏ hàng
-                carts.push({
-                    id: choseId,
-                    name: products[shop].name,
-                    quantity: choseQuantity,
-                    price: products[shop].price,
-                    category: products[shop].category,
-                });
-            } else {
-                // Sản phẩm có trong giỏ hàng rồi cập nhập thêm số lượng
-                carts[index].quantity += choseQuantity;
-                console.log(carts);
-            }
+            carts[cartIndex].quantity += choseQuantity;
         }
+
+        console.log("Giỏ hàng hiện tại:", carts);
     }
 }
 
