@@ -54,15 +54,28 @@ function showList() {
 }
 
 function addBook() {
-    let name = prompt("nhap ten:"); // khong nhap rong
-    let price = +prompt("nhap so tien:"); // khong duoc < 0
-    let quantity = +prompt("nhap so luong:"); // khong dc < 0
-    let category = prompt("the loai:"); // khong nhap rong
+    let name, price, quantity, category;
+    
+    do {
+        name = prompt("Nhập tên sách:");
+    } while (!name.trim());
 
-    let id = list[list.length - 1].id + 1;
+    do {
+        price = +prompt("Nhập giá tiền:");
+    } while (price <= 0);
 
+    do {
+        quantity = +prompt("Nhập số lượng:");
+    } while (quantity < 0);
+
+    do {
+        category = prompt("Nhập thể loại:");
+    } while (!category.trim());
+
+    let id = list.length > 0 ? list[list.length - 1].id + 1 : 1;
+    
     list.push({ id, name, price, quantity, category });
-    console.log(list);
+    console.log("Đã thêm sách:", list);
 }
 
 function findBook() {

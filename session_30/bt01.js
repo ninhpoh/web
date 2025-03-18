@@ -45,50 +45,61 @@ do {
     `);
 
     choise = +prompt("nhap lua chon");
-    
-    switch(choise){
+
+    switch (choise) {
         case 1:
             showProducts();
             break;
         case 2:
             choseProducts();
             break;
+        case 3:
+            sapXep();
+            break;
+        case 4:
+            totalPrice();
+            break;
+        case 5:
+            console.log("Thoát chương trình.");
+            break;
+        default:
+            console.log("Sai thao tác. Vui lòng nhập lại!");
     }
-    
+
 } while (choise !== 5);
 
-function showProducts(){
+function showProducts() {
     let show = +prompt(`
         1. mon Kinh
         2. mon Mong
     `);
-    if(show == 1){
+    if (show == 1) {
         let kinh = products.filter(products => products.category == "món ăn dân tộc Kinh");
-        console.log(kinh);   
-    }else if(show == 2){
+        console.log(kinh);
+    } else if (show == 2) {
         let mong = products.filter(products => products.category == "món ăn dân tộc Mông");
         console.log(mong);
-    }else{
+    } else {
         console.log("khong ton tai danh muc nay");
     }
 }
 
 // Hàm chọn mua sản phẩm
-function choseProducts(){
+function choseProducts() {
     let choseId = prompt('Mời bạn nhập id sản phẩm');
     let shop = products.findIndex(products => products.id == choseId);
-    if(shop == -1){
+    if (shop == -1) {
         console.log('Sản phẩm không có trong giỏ hàng');
-    }else{
+    } else {
         let choseQuantity = prompt('Mời bạn nhập số lượng sản phẩm muốn mua');
-        if(products[shop].quantity < choseQuantity){
+        if (products[shop].quantity < choseQuantity) {
             console.log(`Sản phẩm chỉ còn ${products[shop].quantity}`);
-        }else{
+        } else {
             products[shop].quantity -= choseQuantity;
             // Thêm vào trong giỏ hàng
             // Kiểm tra sản phẩm có trong cửa hàng hay chưa
             let index = carts.findIndex(item => item.id == choseId);
-            if(index == -1){
+            if (index == -1) {
                 // Chứng tỏ sản phẩm không có trong giỏ hàng
                 carts.push({
                     id: choseId,
@@ -97,7 +108,7 @@ function choseProducts(){
                     price: products[shop].price,
                     category: products[shop].category,
                 });
-            }else{
+            } else {
                 // Sản phẩm có trong giỏ hàng rồi cập nhập thêm số lượng
                 carts[index].quantity += choseQuantity;
                 console.log(carts);
@@ -107,21 +118,31 @@ function choseProducts(){
 }
 
 // ham sap xep
-function sapXep(){
+function sapXep() {
     let sx = +prompt(`
-        1. tang dan 
-        2. giam dan
+        1. Sắp xếp tăng dần
+        2. Sắp xếp giảm dần
     `);
-    if(sx==1){
-        handleSort(sx,products);
 
-    }else if(sx ==2){
-        handleSort(sx,products);
-    }else{
-        console.log("sai thao tac");
+    if (sx === 1 || sx === 2) {
+        handleSort(sx, products);
+        console.log("Danh sách sản phẩm sau khi sắp xếp:", products);
+    } else {
+        console.log("Lựa chọn không hợp lệ.");
     }
 }
 
-function handleSort(sx,products){
-    products.sort((a,b)=> sx ==1 ? a.price - b.price : b.price - a.price);
+
+function handleSort(sx, products) {
+    products.sort((a, b) => sx === 1 ? a.price - b.price : b.price - a.price);
+}
+
+function totalPrice() {
+    if (carts.length === 0) {
+        console.log("Giỏ hàng trống.");
+        return;
+    }
+
+    let total = carts.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    console.log(`Tổng số tiền thanh toán: ${total} VND`);
 }
