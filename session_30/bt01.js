@@ -1,52 +1,27 @@
 let products = [
-    {
-        id: 1,
-        name: "mèn mén",
-        price: 20000,
-        quantity: 20,
-        category: "món ăn dân tộc Mông",
-    },
-    {
-        id: 2,
-        name: "mứt",
-        price: 80000,
-        quantity: 21,
-        category: "món ăn dân tộc Kinh",
-    },
-    {
-        id: 3,
-        name: "cơm lam",
-        price: 40000,
-        quantity: 15,
-        category: "món ăn dân tộc Mông",
-    },
-    {
-        id: 4,
-        name: "bánh đậu xanh",
-        price: 60000,
-        quantity: 30,
-        category: "món ăn dân tộc Kinh",
-    }
+    { id: 1, name: "mèn mén", price: 20000, quantity: 20, category: "món ăn dân tộc Mông" },
+    { id: 2, name: "mứt", price: 80000, quantity: 21, category: "món ăn dân tộc Kinh" },
+    { id: 3, name: "cơm lam", price: 40000, quantity: 15, category: "món ăn dân tộc Mông" },
+    { id: 4, name: "bánh đậu xanh", price: 60000, quantity: 30, category: "món ăn dân tộc Kinh" }
 ];
+
+let carts = [];
+let choice;
 
 do {
     console.log(`
-        1. Hiển thị các sản phẩm theo tên danh mục.
-        2. Chọn sản phẩm để mua bằng cách nhập id sản phẩm.
-            a. Sản phẩm không có trong cửa hàng hiển thị thông báo.
-            b. Sản phẩm có trong cửa hàng
-                i. Cho người dùng nhập số lượng sản phẩm muốn mua, mua thành công số lượng sản phẩm trong cửa hàng sẽ bị trừ đi.
-                ii. Số lượng sản phẩm trong cửa hàng = 0 hoặc không đủ hiển thị thông báo.
-        3. Sắp xếp các sản phẩm trong cửa hàng theo giá:
+        1. Hiển thị các sản phẩm theo danh mục.
+        2. Chọn sản phẩm để mua.
+        3. Sắp xếp sản phẩm theo giá.
             a. Tăng dần.
             b. Giảm dần.
-        4. Tính số tiền thanh toán trong giỏ hàng.
-        5. Thoát.    
+        4. Tính tổng số tiền thanh toán trong giỏ hàng.
+        5. Thoát.
     `);
 
-    choise = +prompt("nhap lua chon");
-
-    switch (choise) {
+    choice = +prompt("Nhập lựa chọn:");
+    
+    switch (choice) {
         case 1:
             showProducts();
             break;
@@ -65,22 +40,22 @@ do {
         default:
             console.log("Sai thao tác. Vui lòng nhập lại!");
     }
-
-} while (choise !== 5);
+} while (choice !== 5);
 
 function showProducts() {
     let show = +prompt(`
-        1. mon Kinh
-        2. mon Mong
+        1. Món ăn dân tộc Kinh
+        2. Món ăn dân tộc Mông
     `);
-    if (show == 1) {
-        let kinh = products.filter(products => products.category == "món ăn dân tộc Kinh");
-        console.log(kinh);
-    } else if (show == 2) {
-        let mong = products.filter(products => products.category == "món ăn dân tộc Mông");
-        console.log(mong);
+    
+    if (show === 1) {
+        let kinh = products.filter(product => product.category === "món ăn dân tộc Kinh");
+        console.log("Danh sách món ăn dân tộc Kinh:", kinh);
+    } else if (show === 2) {
+        let mong = products.filter(product => product.category === "món ăn dân tộc Mông");
+        console.log("Danh sách món ăn dân tộc Mông:", mong);
     } else {
-        console.log("khong ton tai danh muc nay");
+        console.log("Không tồn tại danh mục này.");
     }
 }
 
@@ -100,7 +75,6 @@ function choseProducts() {
     } else {
         products[productIndex].quantity -= choseQuantity;
 
-        // Kiểm tra sản phẩm đã có trong giỏ hàng chưa
         let cartIndex = carts.findIndex(item => item.id === choseId);
         
         if (cartIndex === -1) {
@@ -119,7 +93,6 @@ function choseProducts() {
     }
 }
 
-// ham sap xep
 function sapXep() {
     let sx = +prompt(`
         1. Sắp xếp tăng dần
@@ -128,12 +101,12 @@ function sapXep() {
 
     if (sx === 1 || sx === 2) {
         handleSort(sx, products);
-        console.log("Danh sách sản phẩm sau khi sắp xếp:", products);
+        console.log("Danh sách sản phẩm sau khi sắp xếp:");
+        products.forEach(product => console.log(product));
     } else {
         console.log("Lựa chọn không hợp lệ.");
     }
 }
-
 
 function handleSort(sx, products) {
     products.sort((a, b) => sx === 1 ? a.price - b.price : b.price - a.price);
