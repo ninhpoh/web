@@ -45,6 +45,7 @@ function toggleTask(element) {
     element.classList.toggle("checked");
 }
 
+// chat ko tinh do tham khao
 function removeTask(event, element) {
     event.stopPropagation();
     let index = Array.from(element.parentNode.parentNode.children).indexOf(element.parentNode);
