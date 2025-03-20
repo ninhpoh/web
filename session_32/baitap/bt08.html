@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List K24</title>
+    <style>
+        * {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.job-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.job {
+    background: #f5f5f5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <h1>To-Do List K24</h1>
+    
+    <div class="input-container">
+        <input id="text" type="text" placeholder="Nhập công việc">
+        <button onclick="addJob()">Thêm</button>
+    </div>
+
+    <div class="job-container"></div>
+
+    <script src="./js/bt08.js"></script>
+</body>
+</html>
