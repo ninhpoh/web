@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số ký tự</title>
+</head>
+<body>
+    
+    <textarea id="inputText"></textarea>
+    <p id="charCount">0 ký tự</p>
+    <button onclick="countCharacters()">Kiểm tra</button>
+
+    <script>
+        function countCharacters() {
+            let text = document.getElementById("inputText").value;
+            let count = text.length;
+            document.getElementById("charCount").innerText = count + " ký tự";
+        }
+    </script>
+</body>
+</html>

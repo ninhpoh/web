@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>tang giam dam nhat</h1>
+        <progress id="progress" max="100" value="0"></progress>
+        <button onclick="up()">up</button>
+        <button onclick="down()">down</button>
+    </div>
+    
+    <script>
+        let valueProgress =0;
+        let opacity =0;
+        function up(){
+            valueProgress += 10;
+            opacity += 0.1;
+            document.getElementById("progress").value=valueProgress;
+            if(valueProgress >= 100){
+                valueProgress =100;
+            }
+            if(opacity >= 10){
+                opacity = 10;
+            }
+            document.getElementsByClassName("container")[0].style.opacity += opacity;
+            
+        } 
+        function down(){
+            valueProgress += -10;
+            document.getElementById("progress").value=valueProgress;
+            if(valueProgress <=0){
+                valueProgress = 0;
+            }
+        } 
+    </script>
+</body>
+</html>

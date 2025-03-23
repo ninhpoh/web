@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page{
+            display: flex;
+            background: #8d8b8b;
+            width: 300px;
+            gap: 5px;
+        }
+        .page>li{
+            width: 50px;
+            height: 50px;
+            border-radius: 2px;
+            background: #000;
+            color: white;
+            justify-content: center;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="items">
+        <!-- <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li> -->
+    </ul>
+    <ul class="pages">
+        <!-- <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li> -->
+    </ul>
+    <script>
+        let numbers =[1,2,3,4,5,6,7,8,9,10,11];
+        let itemPage =4;
+        let pages = Math.ceil(numbers.length/itemPage);
+
+        function showItems(){
+            let str = "";
+            for (let i = 0 ; i < numbers.length;i++){
+                str +=  ` <li>${numbers[i]}</li> `
+            }
+            document.getElementById("items").innerHTML=str;
+        }
+        showItems();
+
+        function showPages(){
+            let str ="";
+            for (let i = 0; i < pages; i++) {
+                str += `<li>${i+1}</li>`
+            }
+            document.getElementsByClassName("pages")[0].innerHTML=`<button>next</button>${str}<button>befor</button>`
+        }
+        showPages();
+    </script>
+</body>
+</html>

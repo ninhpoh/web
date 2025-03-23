@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            text-align: center;
+        }
+
+        input {
+            position: relative;
+        }
+
+        i {
+            position: absolute;
+            left: 825px;
+            top: 11px;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="text">
+    <i class="fa-solid fa-eye" onclick="hide()"></i>
+    <script>
+        let text = document.getElementById("text");
+        let icon = document.getElementsByTagName("i");
+        let f = 1;
+        function hide() {
+            if (f == 1) {
+                icon[0].classList.remove("fa-eye-slash");
+                icon[0].classList.add("fa-eye");
+                text.type= "text";
+                f++;
+            } else {
+                icon[0].classList.add("fa-eye-slash");
+                icon[0].classList.remove("fa-eye");
+                text.type= "password";
+                f=1;
+            }
+        }
+    </script>
+</body>
+
+</html>

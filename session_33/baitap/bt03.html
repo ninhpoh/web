@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lọc Sản Phẩm Theo Danh Mục</title>
+</head>
+
+<body>
+
+    <select id="categorySelect">
+        <option value="">-- Chọn danh mục --</option>
+        <option value="Đồ ăn">Đồ ăn</option>
+        <option value="Nước">Nước</option>
+        <option value="Dụng cụ">Dụng cụ</option>
+    </select>
+    <button onclick="filterProducts()">Lọc</button>
+
+    <ul id="productList">
+        
+    </ul>
+
+    <script>
+        let dish = [
+            { name: "Rau sạch", category: "Đồ ăn" },
+            { name: "Thịt lợn", category: "Đồ ăn" },
+            { name: "Pepsi không calo", category: "Nước" },
+            { name: "CocaCola", category: "Nước" },
+            { name: "Cờ lê", category: "Dụng cụ" },
+            { name: "Tuy vít", category: "Dụng cụ" }
+        ];
+
+        function filterProducts() {
+            let selectedCategory = document.getElementById("categorySelect").value;
+            let productList = document.getElementById("productList");
+            productList.innerHTML = "";
+
+            let filteredDishes = dish.filter(item => item.category === selectedCategory);
+
+            filteredDishes.forEach(item => {
+                let li = document.createElement("li");
+                li.innerHTML = `<b>Tên đồ ăn:</b> ${item.name} - <b>Danh mục:</b> ${item.category}`;
+                productList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+
+</html>
