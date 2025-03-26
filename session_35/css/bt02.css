@@ -1,33 +1,74 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #2c2c54;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
     max-width: 600px;
     margin: auto;
-    text-align: center;
+    background: #474787;
+    padding: 20px;
+    border-radius: 10px;
 }
-.head button{
-    color: white;
-    background-color: rgb(201, 39, 251);
+
+.add-btn {
+    background: #f1c40f;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-popup {
+    display: none;
+    background: #6a89cc;
+    padding: 20px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.bookmark-list {
     margin-top: 20px;
 }
-.main {
-    right: 38%;
-    position: absolute;
-    /* left: 500px; */
-    width: 300px;
-    height: auto;
-    border: 1px solid black;
-    margin: 20px;
-    padding: 20px;
-    /* display: none; */
+
+.bookmark-item {
+    background: #30336b;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.main button {
-    margin-top: 5px;
-    background-color: violet;
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.main .btn {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-}       
+.close-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 5px;
+    border: none;
+    float: right;
+    cursor: pointer;
+}

@@ -4,40 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookmark Manager</title>
     <link rel="stylesheet" href="./css/bt02.css">
 </head>
 
 <body>
-    <div class="contanner">
-       <div class="head">
-        <button onclick="add()">Add Book</button>
-       </div>
-       
-        <div class="main" style="display: none;">
-            <button class="btn" onclick="close_btn()">X</button>
-            <label for="name">Website Name</label> <br>
-            <input type="text" name="" id="name"> <br>
-            <label for="url">Website URL</label> <br>
-            <input type="text" name="" id="url"> <br>
-            <button onclick="save_form()">Save</button>
-        </div>
-    </div>
-    <script>
-        let Bookmark = JSON.parse(localStorage.getItem("Bookmark")) || [];
-        function add() {
-         document.getElementsByClassName("main")[0].style.display="block";
-        }
-        function close_btn(){
-            document.getElementsByClassName("main")[0].style.display="none";
-        }
-        function save_form() {
-            console.log("uoc");
-            
-            let name = document.getElementById("")
-        }
-    </script>
+    <div class="container">
+        <h1>ADD BOOKMARK</h1>
+        <button class="add-btn" onclick="openForm()">Add Bookmark</button>
 
+        <div class="form-popup" id="bookmarkForm">
+            <button class="close-btn" onclick="closeForm()">X</button>
+            <h2>Add Bookmark</h2>
+            <label for="siteName">Website Name</label>
+            <input type="text" id="siteName" placeholder="Enter website name">
+
+            <label for="siteURL">Website URL</label>
+            <input type="text" id="siteURL" placeholder="Enter website URL">
+
+            <button onclick="saveBookmark()">Save</button>
+        </div>
+
+        <div class="bookmark-list" id="bookmarkList"></div>
+    </div>
+
+    <script src="./js/bt02.js"></script>
 </body>
 
 </html>
