@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: auto;
+    background: #c5c2c2;
+    text-align: center;
+}
+button{
+    background:rgb(115, 190, 3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.food{
+    background-color: whitesmoke;
+    display: flex;
+    width: 350px;
+    justify-content: space-evenly;
+    border: 1px solid whitesmoke;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.food img{
+    width: 200px;
+    border-radius: 10px;
+}

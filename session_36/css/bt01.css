@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+.box{
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    padding:20px 50px 50px 50px;
+    border: 1px solid;
+    box-shadow: 5px 5px rgb(207, 67, 67);
+}
+.box button{
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(46, 46, 254);
+}
+
+.box input{
+    padding: 5px;
+}
+.show{
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    padding:20px 50px 50px 50px;
+    border: 1px solid;
+    box-shadow: 5px 5px rgb(207, 67, 67);
+    /* display: none; */
+}
+.show button{
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(46, 46, 254);
+}
